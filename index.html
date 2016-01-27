@@ -17,5 +17,22 @@
 
     <link rel="stylesheet" href="/styles/admin.css">
   </head>
-  <body></body>
+  <body>
+    <form id="admin-action">
+      <input id="input" type="text" placeholder="enter your changes" autofocus></input>
+      <p></p>
+      <select name="action">
+        <option value="add">add</option>
+        <option value="update">update</option>
+        <option value="remove">remove</option>
+      </select>
+      <select name="difficulty">
+        <option value="easy">easy</option>
+        <option value="medium">medium</option>
+        <option value="hard">hard</option>
+      </select>
+      <button type="submit">complete</button>
+    </form>
+
+  </body>
 </html>
