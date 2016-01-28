@@ -9,30 +9,14 @@
 
     <link rel="icon" href="/favicon.ico">
 
-    <script src="jspm_packages/system.js"></script>
-    <script src="config.js"></script>
-    <script>
-      System.import('components/main.js')
-    </script>
+    <script src="./components/bundle.js"></script>
 
     <link rel="stylesheet" href="/styles/admin.css">
   </head>
   <body>
-    <form id="admin-action">
-      <input id="input" type="text" placeholder="enter your changes" autofocus></input>
-      <p></p>
-      <select name="action">
-        <option value="add">add</option>
-        <option value="update">update</option>
-        <option value="remove">remove</option>
-      </select>
-      <select name="difficulty">
-        <option value="easy">easy</option>
-        <option value="medium">medium</option>
-        <option value="hard">hard</option>
-      </select>
-      <button type="submit">complete</button>
-    </form>
+
+      <button id="hi">complete</button>
+
 
   </body>
 </html>

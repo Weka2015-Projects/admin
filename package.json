@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bundle": "jspm bundle components/main.js --inject",
-    "serve": "python -m SimpleHTTPServer 3000"
+    "serve-db": "json-server --watch server/db.json -- static ./",
+    "serve-dev": "python -m SimpleHTTPServer 8000",
+    "build-watch": "webpack --watch",
+    "build-watch-serve": "npm run build-watch & npm run serve-dev"
   },
   "repository": {
     "type": "git",
@@ -18,17 +20,22 @@
     "url": "https://github.com/Weka2015-Projects/admin/issues"
   },
   "homepage": "https://github.com/Weka2015-Projects/admin#readme",
-  "jspm": {
-    "dependencies": {
-      "react": "npm:react@^0.14.6",
-      "react-bootstrap": "npm:react-bootstrap@^0.28.2",
-      "react-dom": "npm:react-dom@^0.14.6"
-    },
-    "devDependencies": {
-      "babel": "npm:babel-core@^5.8.24",
-      "babel-runtime": "npm:babel-runtime@^5.8.24",
-      "core-js": "npm:core-js@^1.1.4"
-    }
+  "dependencies": {
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "history": "^1.17.0",
+    "jquery": "^2.2.0",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "react-redux": "^4.0.6",
+    "react-router": "^1.0.3",
+    "redux": "^3.0.6",
+    "superagent": "^1.7.2"
   },
-  "dependencies": {}
+  "devDependencies": {
+    "redux-devtools": "^3.0.1",
+    "webpack": "^1.12.12"
+  }
 }
