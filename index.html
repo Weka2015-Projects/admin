@@ -3,20 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="index.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <title>Amazing!</title>
-
-    <link rel="icon" href="/favicon.ico">
-
-    <script src="./components/bundle.js"></script>
-
-    <link rel="stylesheet" href="/styles/admin.css">
+    <script src="bundle.js"></script>
   </head>
   <body>
-
-      <button id="hi">complete</button>
-
+    <form id="admin-action">
+      <input id="input" type="text" placeholder="enter your changes" autofocus>
+        <p></p>
+      <select name="action">
+        <option value="add">add</option>
+        <option value="update">update</option>
+        <option value="remove">remove</option>
+      </select>
+      <select name="difficulty">
+        <option value="easy">easy</option>
+        <option value="medium">medium</option>
+        <option value="hard">hard</option>
+      </select>
+      <button type="submit">complete</button>
+    </form>
 
   </body>
 </html>

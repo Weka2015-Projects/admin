@@ -1,41 +1,41 @@
 {
-  "name": "admin",
+  "name": "katie",
   "version": "1.0.0",
-  "description": "jason/katie",
+  "description": "it's a real sweet app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve-db": "json-server --watch server/db.json -- static ./",
-    "serve-dev": "python -m SimpleHTTPServer 8000",
-    "build-watch": "webpack --watch",
-    "build-watch-serve": "npm run build-watch & npm run serve-dev"
+    "start": "budo . -d --serve bundle.js --live",
+    "build": "browserify . -o bundle.js -g uglifyify",
+    "test": "browserify test.js | smokestack | tap-spec",
+    "dist": "mkdir -p dist && bash -c 'cp *.{js,html,css} dist'",
+    "push": "gh-pages -d dist",
+    "deploy": "npm run build && npm run dist && npm run push",
+    "serve-db": "json-server --watch server/db.json -- static ./"
+  },
+  "browserify": {
+    "transform": []
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Weka2015-Projects/admin.git"
+    "url": "https://github.com/author/katie"
   },
-  "author": "",
+  "author": "author",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Weka2015-Projects/admin/issues"
+    "url": "https://github.com/author/katie/issues"
   },
-  "homepage": "https://github.com/Weka2015-Projects/admin#readme",
+  "homepage": "https://github.com/author/katie",
   "dependencies": {
-    "babel-core": "^6.4.5",
-    "babel-loader": "^6.2.1",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-preset-react": "^6.3.13",
-    "history": "^1.17.0",
-    "jquery": "^2.2.0",
-    "react": "^0.14.6",
-    "react-dom": "^0.14.6",
-    "react-redux": "^4.0.6",
-    "react-router": "^1.0.3",
-    "redux": "^3.0.6",
-    "superagent": "^1.7.2"
+    "jQuery": "^1.7.4"
   },
   "devDependencies": {
-    "redux-devtools": "^3.0.1",
-    "webpack": "^1.12.12"
+    "browserify": "^10.0.0",
+    "budo": "^4.0.0",
+    "gh-pages": "^0.3.0",
+    "smokestack": "^3.3.0",
+    "tap-spec": "^4.0.2",
+    "tape": "^4.0.0",
+    "uglifyify": "^3.0.1",
+    "watchify": "^3.1.0"
   }
 }
