@@ -3,11 +3,15 @@
 
 'use strict'
 
+var action = $('.action').val()
+if(action === ) { return true }
+
 $(document).ready(function(){
+
   $('#admin-action').on('submit', function(e) {
   e.preventDefault()
   var gameName = $('#input').val()
-  $.post('http://localhost:3000/player', {name: gameName})
+  $.post('http://localhost:3000/games', {content: gameName})
   console.log(gameName)
   })
 })

@@ -1,5 +1,5 @@
 {
-  "player": [
+  "players": [
     {
       "name": "",
       "high_score": ""
@@ -31,16 +31,24 @@
       "id": "b3694e39-814e-4c9e-b034-5de69dccbda5"
     }
   ],
-  "play": [
+  "plays": [
     {
       "player_id": "",
       "game_id": "",
       "score": ""
     }
   ],
-  "game": [
+  "games": [
     {
       "content": ""
+    },
+    {
+      "content": "charles",
+      "id": "06212dc9-ecbf-4c08-919c-6985a8b0584f"
+    },
+    {
+      "content": "",
+      "id": "3193914d-d991-403e-882b-709ffef3a475"
     }
   ]
 }
